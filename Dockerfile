@@ -1,5 +1,5 @@
-# use stable alpine v3.8
-FROM alpine:v3.8
+# use stable alpine 3.8
+FROM alpine:3.8
 
 # install ansible, composer, git, hugo, openssh-client and tar
 RUN apk add --no-cache ansible composer git hugo openssh-client tar
