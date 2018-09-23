@@ -33,6 +33,8 @@ RUN apk add --no-cache \
     libjpeg-turbo-dev \
     libmcrypt-dev \
     libpng-dev \
+    libxml2-dev \
+    libxslt-dev \
   && docker-php-ext-configure gd \
     --with-gd \
     --with-freetype-dir=/usr/include/ \
@@ -42,4 +44,7 @@ RUN apk add --no-cache \
     gd \
     intl \
     mcrypt \
-    pdo_mysql
+    pdo_mysql \
+    soap \
+    xsl \
+    zip
