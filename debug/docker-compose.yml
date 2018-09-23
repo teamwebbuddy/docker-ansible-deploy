@@ -1,0 +1,11 @@
+version: '2'
+
+# define debug service
+services:
+  debug:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    #volumes:
+    #  - ../../project-dir:/src:rw
+    #working_dir: /src
