@@ -3,7 +3,7 @@ FROM php:7.4-fpm-alpine
 
 # install ansible and ansistrano
 RUN apk add --no-cache ansible \
-    && ansible-galaxy install ansistrano.deploy,2.9.1
+    && ansible-galaxy install ansistrano.deploy,3.6.0
 
 # install hugo
 ENV HUGO_VERSION 0.48
