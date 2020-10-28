@@ -1,5 +1,5 @@
-# use stable alpine php 7.0 as the base image - ubuntu 16.04 uses php 7.0
-FROM php:7.0-fpm-alpine
+# use stable alpine php 7.4 as the base image - ubuntu 20.04 uses php 7.4
+FROM php:7.4-fpm-alpine
 
 # install ansible and ansistrano
 RUN apk add --no-cache ansible \
@@ -31,19 +31,17 @@ RUN apk add --no-cache \
     freetype-dev \
     icu-dev \
     libjpeg-turbo-dev \
-    libmcrypt-dev \
     libpng-dev \
     libxml2-dev \
     libxslt-dev \
+    libzip-dev \
   && docker-php-ext-configure gd \
-    --with-gd \
-    --with-freetype-dir=/usr/include/ \
-    --with-png-dir=/usr/include/ \
-    --with-jpeg-dir=/usr/include/ \
+    --enable-gd \
+    --with-freetype \
+    --with-jpeg \
   && docker-php-ext-install \
     gd \
     intl \
-    mcrypt \
     pdo_mysql \
     soap \
     xsl \
