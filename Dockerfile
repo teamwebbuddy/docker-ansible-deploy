@@ -5,8 +5,8 @@ FROM php:7.4-fpm-alpine
 RUN apk add --no-cache ansible \
     && ansible-galaxy install ansistrano.deploy,3.6.0
 
-# install hugo
-ENV HUGO_VERSION 0.48
+# install hugo - keep the same version as used by lando in the www.webbuddy.com.au repo
+ENV HUGO_VERSION 0.77.0
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit
 RUN mkdir /usr/local/hugo
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /usr/local/hugo/
