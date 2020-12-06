@@ -45,5 +45,6 @@ RUN apk add --no-cache \
     intl \
     pdo_mysql \
     soap \
+    sockets \
     xsl \
     zip
