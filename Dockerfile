@@ -24,7 +24,7 @@ RUN apk add --no-cache \
 ADD https://getcomposer.org/installer /tmp/composer-setup.php
 ADD https://composer.github.io/installer.sig /tmp/composer-setup.sig
 RUN php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) !== trim(file_get_contents('/tmp/composer-setup.sig'))) { unlink('/tmp/composer-setup.php'); echo 'Invalid installer' . PHP_EOL; exit(1); }" \
-  && php /tmp/composer-setup.php --install-dir=/usr/bin --filename=composer
+  && php /tmp/composer-setup.php --install-dir=/usr/bin --filename=composer --1
 
 # install php extensions
 RUN apk add --no-cache \
