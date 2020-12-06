@@ -40,6 +40,7 @@ RUN apk add --no-cache \
     --with-freetype \
     --with-jpeg \
   && docker-php-ext-install \
+    bcmath \
     gd \
     intl \
     pdo_mysql \
